@@ -1,218 +1,201 @@
-
-body {
-  background-color: black;
-  font-family: cursive;
-width: 100%;
-  height: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-} 
-
-body
-{
-  background-clip: url("Blue\ and\ Black\ Modern\ Cyber\ Security\ Video.mp4");
-}
-.contact-title {
-  font-size: 80px;
-  color: #fff;
-  text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Hind+Siliguri&family=Roboto:wght@500&display=swap");
 
 * {
-  .bg-text {
-    background-color: rgb(253, 253, 253); /* Semi-transparent black background */
-    color: white; /* White text color */
-    font-weight: bold; /* Make the text bold */
-    /* Other styles (positioning, padding, etc.) as needed */
-  }
-  
-  font-weight: bold; /* Make the text bold */
-  /* Other styles (positioning, padding, etc.) as needed */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-decoration: none;
+  font-family: "Hind Siliguri", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+
+}
+.header {
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+.header:hover::before {
+  left: 100%;
+}
+.logo {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+}
+.navbar a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: #f00;
 }
 
-
-.contact-section {
-    width: 100%;
-    max-width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3rem 1rem;
-  }
-  
-  .contact-intro > * + * {
-    margin-top: 1rem;
-  }
-  
-  .contact-title {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-  }
-  
-  .contact-description {
-    color: rgb(255, 0, 0);
-  }
-  
-  .form-group-container {
-    display: grid;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-label {
-    margin-bottom: 0.5rem;
-  }
-  
-  .form-input,
-  .form-textarea {
-    padding: 0.5rem;
-    border: 1px solid #e5e7eb;
-    display: flex;
-    height: 2.5rem;
-    width: 100%;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-  
-  .form-input::placeholder,
-  .form-textarea:focus-visible {
-    color: #6b7280;
-  }
-  
-  .form-input:focus-visible,
-  .form-textarea:focus-visible {
-    outline: 2px solid #2563eb;
-    outline-offset: 2px;
-  }
-  
-  .form-textarea {
-    min-height: 120px;
-  }
-  
-  .form-submit {
-    width: 100%;
-    margin-top: 1.2rem;
-    background-color: #3124ca;
-    color: #fff;
-    padding: 13px 5px;
-    border-radius: 0.375rem;
-  }
-  /* Default styling for all devices */
-.gfg-div {
+.main {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
-  padding: 30px;
-  font-size: 30px;
-  width: 300px;
-  height: 300px;
-  background-color: darkseagreen;
-  color: black;
+}
+.vid {
+  position: absolute;
+  
+}
+.main .card {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.349);
+  backdrop-filter: blur(7px);
+  box-shadow: 0 25px 45px rgba(0, 1, 0, 0.1);
 }
 
-/* For desktop view (min-width: 1024px) */
-@media screen and (min-width: 1024px) {
-  .gfg-div {
-      background-color: #63c971;
-      color: #fff;
-  }
+h1 {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
 }
 
-/* For tablet view (min-device-width: 768px and max-device-width: 1024px) */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: orange;
-      color: black;
-  }
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  max-width: 310px;
+  border-bottom: 2px solid #fff;
 }
 
-/* For mobile portrait view (max-device-width: 480px and orientation: portrait) */
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
-  .gfg-div {
-      width: 200px;
-      height: 200px;
-      background-color: red;
-      color: #fff;
-  }
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
 }
 
-/* For mobile landscape view (max-device-width: 640px and orientation: landscape) */
-@media screen and (max-device-width: 640px) and (orientation: landscape) {
-  .gfg-div {
-      width: 400px;
-      height: 200px;
-      background-color: cyan;
-      color: black;
-  }
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
 }
 
-/* For mobile phones (max-device-width: 640px) */
-@media screen and (max-device-width: 640px) {
-  .gfg-div {
-      width: 400px;
-      height: 200px;
-      background-color: chartreuse;
-      color: black;
-  }
+.inputbox input {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 35px 0 5px;
+  color: #fff;
 }
 
-/* For iPhone 4 (min-device-width: 320px and -webkit-min-device-pixel-ratio: 2) */
-@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-  .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: brown;
-      color: black;
-  }
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  top: 20px;
 }
 
-/* For iPhone 5 (device-height: 568px and device-width: 320px and -webkit-min-device-pixel-ratio: 2) */
-@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-  .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: cornflowerblue;
-      color: black;
-  }
+.forget {
+  margin: 35px 0;
+  font-size: 0.85rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* For iPhone 6 and 6 Plus (min-device-height: 667px and min-device-width: 375px and -webkit-min-device-pixel-ratio: 3) */
-@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
-  .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: darkgoldenrod;
-      color: black;
-  }
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+.forget label input {
+  margin-right: 3px;
+}
+
+.forget a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.forget a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255, 1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+button:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.register {
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
+.button a {
+  color: #f9f9f9;
 }
